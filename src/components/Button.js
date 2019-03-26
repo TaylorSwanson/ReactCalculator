@@ -7,11 +7,11 @@ class Button extends Component {
 
     this.handleClick = function() {
       //
-      if (props.isFunctional) {
+      if (props.action) {
         // Update redux
         return props.dispatch({
           type: "APPLY_OPERATION",
-          payload: props.operation
+          payload: props.action
         });
       }
 
@@ -30,6 +30,9 @@ class Button extends Component {
     }
     if (this.props.smallText) {
       className += " small-text";
+    }
+    if (this.props.equals) {
+      className += " equals";
     }
 
     return (

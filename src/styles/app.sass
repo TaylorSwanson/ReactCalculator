@@ -10,6 +10,7 @@ body
   width: $app-width
   margin: 100px auto
   border: $space-small solid $calc-background-color
+  border-radius: 6px
   background-color: $calc-background-color
 
 .stack
@@ -37,20 +38,20 @@ body
     float: left
     box-sizing: border-box
     text-align: center
-    font-size: 17px
-    line-height: $height-multiplier * $app-width - 4px
-    border: 1.5px solid $calc-background-color
+    font-size: 18px
+    line-height: $height-multiplier * $app-width - 3px
+    border: 3px solid $calc-background-color
     background-color: $stack-color
     color: $accent-dark
     cursor: pointer
+    user-select: none
+    border-left: 0px
+    border-bottom: 0px
 
     &:hover
       background-color: #d9dce2
       // color: $accent
-      // color: #fff
-
-    &:first-of-type
-      border-left: 0px
+      // color: #fff      
 
     &.functional
       width: $button-functional-width * $app-width
@@ -65,3 +66,9 @@ body
     
     &.small-text
       font-size: 14px
+
+    &.equals
+      border-top: 0px
+      margin-top: $space-small - 1px
+      float: right
+      width: 100%
