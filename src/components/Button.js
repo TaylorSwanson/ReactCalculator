@@ -2,24 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Button extends Component {
-  constructor(props) {
-    super(props);
 
-    this.handleClick = function() {
-      //
-      if (props.action) {
+
+  handleClick() {
+      const { action, value, dispatch } = this.props;
+      if (action) {
         // Update redux
-        return props.dispatch({
+        return dispatch({
           type: "APPLY_OPERATION",
-          payload: props.action
+          payload: action
         });
       }
 
-      props.dispatch({
+      dispatch({
         type: "ADD_NUMBER",
-        payload: props.value
+        payload: value
       });
-    };
   }
 
   render() {
@@ -37,7 +35,7 @@ class Button extends Component {
 
     return (
       <div className={`button ${className}`}
-      onClick={this.handleClick}>
+      onClick={() => this.handleClick()}>
         {this.props.value}
       </div>
     );
