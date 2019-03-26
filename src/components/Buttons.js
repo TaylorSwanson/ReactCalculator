@@ -5,26 +5,35 @@ class Buttons extends Component {
   render() {
     return (
       <div className="button-row">
-        <Button label="7"/>
-        <Button label="8"/>
-        <Button label="9"/>
-        <Button label="AC" isFunctional="true"
-        smallText="true"/>
+        <Button value="7"/>
+        <Button value="8"/>
+        <Button value="9"/>
+        <Button value="AC"
+        isFunctional="true"
+        smallText="true"
+        action="clear"/>
 
-        <Button label="4"/>
-        <Button label="5"/>
-        <Button label="6"/>
-        <Button label="÷" isFunctional="true"/>
+        <Button value="4"/>
+        <Button value="5"/>
+        <Button value="6"/>
+        <Button value="÷"
+        isFunctional="true"
+        action="div"/>
 
-        <Button label="1"/>
-        <Button label="2"/>
-        <Button label="3"/>
-        <Button label="×" isFunctional="true"/>
+        <Button value="1"/>
+        <Button value="2"/>
+        <Button value="3"/>
+        <Button value="×"
+        isFunctional="true"
+        action="mul"/>
 
-        <Button label="0"/>
-        <Button label="."/>
-        <Button label="="/>
-        <Button label="+" isFunctional="true"/>
+        <Button value="0"/>
+        <Button value="."/>
+        <Button value="="/>
+        <Button value="+"
+        isFunctional="true"
+        action="div"/>
+
         <div className="clear"></div>
       </div>
     );

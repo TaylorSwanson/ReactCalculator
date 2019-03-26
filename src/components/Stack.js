@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Stack extends Component {
   render() {
     return (
       <div className="stack">
-        1234
+        {this.props.currentValue}
       </div>
     );
   }
 }
 
-export default Stack;
+function mapStateToProps(state) {
+  return {
+    currentValue: state.currentValue,
+    currentOperation: state.currentOperation,
+  };
+}
+
+export default connect(mapStateToProps)(Stack);
