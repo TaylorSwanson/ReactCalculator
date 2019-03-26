@@ -1,0 +1,66 @@
+@import "./vars.sass"
+
+body
+  background-color: $background-color
+
+  div.clear
+    clear: both
+
+.app
+  width: $app-width
+  margin: 100px auto
+  border: $space-small solid $calc-background-color
+  background-color: $calc-background-color
+
+.stack
+  padding: $space-small
+  font-size: 24px
+  line-height: 30px
+  margin-bottom: $space-small
+  // font-weight: 300
+  text-align: right
+  color: $stack-text-color
+  background-color: $stack-color
+
+.button-row
+
+  &:first-of-type
+    .button
+      border-top: 0px
+
+  .button
+    $height-multiplier: 0.17
+
+    width: $button-default-width * $app-width
+    height: $height-multiplier * $app-width
+    display: inline-block
+    float: left
+    box-sizing: border-box
+    text-align: center
+    font-size: 20px
+    line-height: $height-multiplier * $app-width - 4px
+    border: 1.5px solid $calc-background-color
+    background-color: $stack-color
+    color: $accent-dark
+    cursor: pointer
+
+    &:hover
+      background-color: #d9dce2
+      // color: $accent
+      // color: #fff
+
+    &:first-of-type
+      border-left: 0px
+
+    &.functional
+      width: $button-functional-width * $app-width
+      height: $height-multiplier * $app-width
+      background-color: $accent
+      color: #fff
+      border-right: 0px
+
+      &:hover
+        background-color: $accent-dark
+    
+    &.small-text
+      font-size: 14px
